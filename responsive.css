@@ -1,0 +1,29 @@
+@media(max-width:480px) {
+    .container{
+        width: 90%;
+      background-color: white;
+    }
+
+    input{
+        width: 70%;
+        padding: 5px 20px;
+
+    }
+    #signupbtn{
+        margin-top: 10px;
+       width: 80%;
+       padding: 10px;
+       background-color: #544df1;
+       border: none;
+       border-radius: 5px;
+       color: white;
+       cursor: pointer;
+    }
+    .bottom{
+        display: flex;
+        gap: 40px;
+        flex-direction: column;
+        align-items: center;
+        margin-left: -100px;
+    }
+}

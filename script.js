@@ -15,17 +15,27 @@ function randomtoken(){
     }
     return token;
 }
+function displayErrorMessage(message) {
+    const errorMessage = document.getElementById('error-message');
+    errorMessage.textContent = message;
+}
+
+function displaySuccessMessage(message) {
+    const successMessage = document.getElementById('error-message');
+    successMessage.style.color = 'green';
+    successMessage.textContent = message;
+}
 
 const signupButton = document.getElementById('signupbtn');
 signupButton.addEventListener('click', (e) => {
     e.preventDefault();
 
     if (fname.value.trim() ==='' || email.value.trim() ==='' || password.value.trim() ==='' ) {
-        alert('All fields are mandatory.');
+        displayErrorMessage('All fields are mandatory.');
 
     }else{
         if(password.value.trim() !== cpassword.value.trim()){
-            alert('password not match');
+            displayErrorMessage('Password not match!!!');
             password.value = '';
             cpassword.value = '';
         }else{
@@ -41,7 +51,7 @@ signupButton.addEventListener('click', (e) => {
             };
             console.log(user);
             localStorage.setItem('user', JSON.stringify(user));
-            alert('congratulation');
+            displaySuccessMessage('Signup successful! Redirecting to profile page...');
 
             setTimeout(() => {
                 window.location.href = '../profile/index.html';

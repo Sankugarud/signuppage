@@ -1,0 +1,10 @@
+@media(max-width:480px) {
+    .container{
+
+        width: 80%;
+        margin: 50px auto;
+      padding: 10px 20px;
+      text-align: center;
+      background-color: white;
+    }
+}

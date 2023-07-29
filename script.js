@@ -38,7 +38,10 @@ signupButton.addEventListener('click', (e) => {
             displayErrorMessage('Password not match!!!');
             password.value = '';
             cpassword.value = '';
-        }else{
+        }else if (!isValidEmail(email.value.trim())) {
+            displayErrorMessage('Invalid email address.');
+            email.value = '';
+        } else{
             let firstname = fname.value;
             let emailname = email.value;
             let confirmpass = cpassword.value;
@@ -63,3 +66,7 @@ signupButton.addEventListener('click', (e) => {
    
 });
 
+function isValidEmail(email) {
+    // Simple check for "@" and "."
+    return email.includes('@') && email.includes('.');
+}

@@ -1,6 +1,11 @@
 let user = JSON.parse(localStorage.getItem('user'));
 console.log(user);
 
+if (!user || !user.tokengen) {
+    
+    window.location.href = '../index.html';
+}
+
 const fullname = document.getElementById('fname');
     const fullemail = document.getElementById('email');
     const fulltoken = document.getElementById('token');

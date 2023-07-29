@@ -1,17 +1,17 @@
 @media(max-width:480px) {
     .container{
-        width: 90%;
+        width: 70%;
       background-color: white;
     }
 
     input{
-        width: 70%;
+        width: 85%;
         padding: 5px 20px;
 
     }
     #signupbtn{
         margin-top: 10px;
-       width: 80%;
+       width: 100%;
        padding: 10px;
        background-color: #544df1;
        border: none;
@@ -24,6 +24,5 @@
         gap: 40px;
         flex-direction: column;
         align-items: center;
-        margin-left: -100px;
     }
 }
